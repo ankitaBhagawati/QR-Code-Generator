@@ -6,7 +6,7 @@ function Header() {
       <div className="header-inner">
         <div className="logo">
           <span className="logo-bracket">[</span>
-          <span className="logo-text">QR Bagiwtty</span>
+          <span className="logo-text">QR Bagwitty</span>
           <span className="logo-bracket">]</span>
         </div>
         <div className="header-meta">
