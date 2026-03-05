@@ -1,0 +1,137 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.value-tag {
+  color: var(--neon-green);
+  font-size: 0.65rem;
+}
+
+/* Range slider */
+.cyber-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cyber-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--neon-green);
+  box-shadow: 0 0 8px var(--neon-green);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.cyber-range::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 16px var(--neon-green);
+}
+
+.range-ticks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tick {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+.tick.active {
+  color: var(--neon-green);
+}
+
+/* Presets */
+.presets-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+}
+
+.preset-btn::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--preset-color);
+  margin-right: 5px;
+  box-shadow: 0 0 4px var(--preset-color);
+}
+
+.preset-btn:hover,
+.preset-btn.active {
+  border-color: var(--preset-color, var(--neon-green));
+  color: var(--text-primary);
+}
+
+/* Color pickers */
+.color-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.color-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.color-pick-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.4rem 0.6rem;
+}
+
+.color-pick {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.color-hex {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
